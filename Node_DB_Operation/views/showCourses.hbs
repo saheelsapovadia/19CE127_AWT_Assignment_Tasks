@@ -1,0 +1,30 @@
+<header>
+  <div class="name" href="/">Savvy</div>
+  <nav>
+    <ul class="navlinks">
+      <li><a href="/add-course">Add New Course</a></li>
+      <li><a href="/show-courses">Show All Courses</a></li>
+    </ul>
+  </nav>
+</header>
+
+<h3>{{title}}</h3>
+
+<table>
+  <thead>
+    <tr>
+      {{#each array.0}}
+        <th>{{@key}}</th>
+      {{/each}}
+    </tr>
+  </thead>
+  <tbody>
+    {{#each array}}
+      <tr>
+        {{#each this}}
+          <td>{{this}}</td>
+        {{/each}}
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
